@@ -8,13 +8,10 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
-    public TextMeshProUGUI livesText;
-    public GameObject LoseTextObject;
     public GameObject winTextObject;
 
     private Rigidbody rb;
     private int count;
-    private int lives;
     private float movementX;
     private float movementY;
 
@@ -24,15 +21,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
 
-        rb = GetComponent<Rigidbody>();
-        lives = 3;
-
         SetCountText();
         winTextObject.SetActive(false);
-
-        SetCountText();
-        LoseTextObject.SetActive(false);
-
     }
 
     void OnMove(InputValue movementValue)
@@ -46,16 +36,9 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 28)
+        if (count >= 20)
         {
             winTextObject.SetActive(true);
-        }
-
-        livesText.text = "Lives: " + lives.ToString();
-        if (lives == 0)
-        {
-            LoseTextObject.SetActive(true);
-            Destroy(gameObject);
         }
     }
 
