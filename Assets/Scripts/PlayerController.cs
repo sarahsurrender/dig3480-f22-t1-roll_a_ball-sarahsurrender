@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
         SetCountText();
         winTextObject.SetActive(false);
 
-        
-
+        SetCountText();
+        LoseTextObject.SetActive(false);
         
     }
 
