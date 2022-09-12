@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
         SetCountText();
         LoseTextObject.SetActive(false);
-        
+
     }
 
     void OnMove(InputValue movementValue)
