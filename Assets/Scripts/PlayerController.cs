@@ -8,10 +8,14 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
+    public TextMeshProUGUI livesText;
     public GameObject winTextObject;
+    public GameObject loseTextObject;
+
 
     private Rigidbody rb;
     private int count;
+    private int lives;
     private float movementX;
     private float movementY;
 
