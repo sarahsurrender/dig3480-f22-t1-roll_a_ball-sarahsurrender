@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(50f, 0.5f, 50f);
         }
 
-        else if (count == 20)
+        else if (count == 13)
         {
             transform.position = new Vector3(100f, 0.5f, 100f);
         }
